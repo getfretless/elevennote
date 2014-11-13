@@ -2,13 +2,41 @@
 <html>
 <head>
   <title>Elevennote</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="container wrap">
+  <div class="row">
+    <div class="col-xs-12">
+      <header>
+        <div class="well">ElevenNote</div>
+      </header>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4">
+        <nav id="sidebar">
+          <div class="well">
+            SIDEBAR
+          </div>
+        </nav>
+      </div>
+      <div class="col-xs-8">
+        <main>
+          <div class="well">
+            <!-- BEGIN main content -->
+            <%= flash_messages %>
+            <%= yield %>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
