@@ -1,0 +1,16 @@
+<h3>Sign Up for ElevenNote</h3>
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </p>
+  <%= f.submit 'Sign Up', class: 'btn btn-default' %>
+<% end %>
