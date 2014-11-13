@@ -26,3 +26,11 @@ en:
       create:
         success: "Thanks for signing up!"
         failure: "There was a problem with your registration."
+      unauthorized: "Please sign in to view that page."
+  session:
+    flash:
+      create:
+        success: "Welcome!"
+        failure: "There was a problem logging in with those credentials."
+      destroy:
+        success: "You are now logged out."

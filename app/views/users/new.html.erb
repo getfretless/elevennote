@@ -13,4 +13,5 @@
     <%= f.password_field :password %>
   </p>
   <%= f.submit 'Sign Up', class: 'btn btn-default' %>
+  <span class="login">Already have an account? <%= link_to 'Sign in', login_path %>.</span>
 <% end %>
