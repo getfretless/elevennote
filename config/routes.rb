@@ -7,4 +7,12 @@ Rails.application.routes.draw do
   resources :sessions, only: :create
   delete 'logout' => 'sessions#destroy', as: :logout
   get    'login'  => 'sessions#new',     as: :login
+
+
+  # /api/v1/notes.json
+  namespace :api, defaults: { format: 'json' } do
+    namespace :v1 do
+      resources :notes
+    end
+  end
 end
