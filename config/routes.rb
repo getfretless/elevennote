@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   root 'welcome#index'
   resources :users, only: :create
   resources :notes, except: :edit
