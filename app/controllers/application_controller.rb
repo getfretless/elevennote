@@ -5,7 +5,9 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def authorize_user
-    redirect_to login_path, alert: t('user.flash.unauthorized') if current_user.nil?
+    if current_user.nil?
+      redirect_to login_path, alert: t('user.flash.unauthorized')
+    end
   end
 
   private

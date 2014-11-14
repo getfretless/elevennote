@@ -34,3 +34,11 @@ en:
         failure: "There was a problem logging in with those credentials."
       destroy:
         success: "You are now logged out."
+  note:
+    flash:
+      create:
+        success: "Your note has been created!"
+        failure: "There was a problem creating your note."
+      update:
+        success: "Saved!"
+        failure: "There was a problem saving your changes."

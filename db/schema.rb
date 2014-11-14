@@ -17,7 +17,15 @@ ActiveRecord::Schema.define(version: 20141113223653) do
   enable_extension "plpgsql"
 
   create_table "notes", force: true do |t|
+    t.string   "title"
+    t.text     "body_html"
+    t.text     "body_text"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  add_index "notes", ["user_id"], name: "index_notes_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "username"
