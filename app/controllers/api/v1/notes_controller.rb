@@ -10,4 +10,13 @@ class API::V1::NotesController < API::APIController
     @note = current_api_user.notes.find params[:id]
   end
 
+  def create
+    note = current_api_user.notes.build note_params
+    if note.save
+      redirect_to api_v1_note_path(note)
+    else
+      render json: note.errors, status: :unprocessable_entity
+    end
+  end
+
 end
