@@ -11,6 +11,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'bootsy'
+gem 'sanitize'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0.0.beta4'
