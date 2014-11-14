@@ -1,0 +1,10 @@
+<% if @notes.present? %>
+  <ul id="notes">
+    <% @notes.each do |note| %>
+      <li>
+        <%= content_tag :div, note.title, class: 'note-title' %>
+        <%= content_tag :div, note.body_html.to_s.html_safe, class: 'note-body' %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

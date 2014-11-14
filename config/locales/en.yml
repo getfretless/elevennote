@@ -42,3 +42,6 @@ en:
       update:
         success: "Saved!"
         failure: "There was a problem saving your changes."
+      destroy:
+        success: "That note has been deleted."
+        failure: "We weren't able to delete that note."
