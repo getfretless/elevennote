@@ -31,6 +31,10 @@
     <div class="row">
       <div class="col-xs-4">
         <nav id="sidebar">
+          <%= button_to new_note_path, method: 'get', class: 'new-note btn btn-default' do %>
+            <i class="fa fa-plus-circle"></i>
+            New Note
+          <% end %>
           <%= render 'notes/list' %>
         </nav>
       </div>
