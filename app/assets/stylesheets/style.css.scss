@@ -70,6 +70,12 @@ input#note_title {
     outline: none;
   }
 }
+#sidebar {
+  position: absolute;
+  width: 95%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
 ul#notes {
   list-style: none;
   margin-top: 1em;
