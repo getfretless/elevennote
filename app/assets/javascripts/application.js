@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require bootsy
+//= require zeroclipboard
 //= require_tree .

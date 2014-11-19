@@ -26,6 +26,9 @@ en:
       create:
         success: "Thanks for signing up!"
         failure: "There was a problem with your registration."
+      update:
+        success: "Your profile has been updated."
+        failure: "There was a problem updating your profile."
       unauthorized: "Please sign in to view that page."
   session:
     flash:

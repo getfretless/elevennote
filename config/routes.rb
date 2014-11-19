@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   root 'welcome#index'
-  resources :users, only: :create
+  resources :users, only: [:create, :update]
   resources :notes, except: :edit
-  get 'sign_up' => 'users#new', as: :sign_up
+  get 'sign_up' => 'users#new',  as: :sign_up
+  get 'profile' => 'users#edit', as: :profile
   resources :sessions, only: :create
   delete 'logout' => 'sessions#destroy', as: :logout
   get    'login'  => 'sessions#new',     as: :login

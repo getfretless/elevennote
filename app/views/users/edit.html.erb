@@ -1,0 +1,25 @@
+<h3>User Profile</h3>
+<%= form_for @user do |f| %>
+  <p>
+    <label>Username</label><br>
+    <%= f.object.username %>
+  </p>
+  <p>
+    <label>API Key</label><br>
+    <%= f.text_field :api_key, readonly: true, style: 'vertical-align: middle' %>
+    <button type="button" class='btn btn-default' data-clipboard-target='user_api_key' data-clipboard-text='Copy me!' id='api_clip_button' title='Copy API Key to clipboard.'><i class="fa fa-clipboard"></i></button>
+  </p>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :password, 'New Password' %><br>
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, 'Re-type New Password' %><br>
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <%= f.submit 'Save Changes', class: 'btn btn-default' %>
+<% end %>

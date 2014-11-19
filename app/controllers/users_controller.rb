@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def edit
+    @user = current_user
+  end
+
   def create
     @user = User.new user_params
     if @user.save
@@ -13,6 +17,16 @@ class UsersController < ApplicationController
     else
       flash.now[:alert] = t('user.flash.create.failure')
       render :new
+    end
+  end
+
+  def update
+    @user = current_user
+    if @user.update user_params
+      redirect_to root_url, notice: t('user.flash.update.success')
+    else
+      flash.now[:alert] = t('user.flash.update.failure')
+      render :edit
     end
   end
 
