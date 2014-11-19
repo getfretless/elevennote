@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authorize_user, only: [:edit, :update]
   layout 'landing'
 
   def new
@@ -7,6 +8,8 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
+    @notes = current_user.notes.all
+    render layout: 'application'
   end
 
   def create
@@ -26,7 +29,8 @@ class UsersController < ApplicationController
       redirect_to root_url, notice: t('user.flash.update.success')
     else
       flash.now[:alert] = t('user.flash.update.failure')
-      render :edit
+      @notes = current_user.notes.all
+      render :edit, layout: 'application'
     end
   end
 
