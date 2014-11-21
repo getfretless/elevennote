@@ -19,5 +19,7 @@ group :development, :test do
   gem 'spring'
   gem 'quiet_assets'
   gem 'pry-rails'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 gem 'rails_12factor', group: :production

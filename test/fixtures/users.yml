@@ -1,0 +1,4 @@
+dave:
+  name: 'David Jones'
+  username: 'dave'
+  password_digest: <%= BCrypt::Password.create 'password' %>
