@@ -16,4 +16,6 @@ Rails.application.routes.draw do
       resources :notes
     end
   end
+  match '/api/*path' => 'api/api#preflight', via: [:options]
+
 end

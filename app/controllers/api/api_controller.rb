@@ -2,6 +2,10 @@ class API::APIController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :set_access_control_headers
 
+  def preflight
+    head :ok
+  end
+
   protected
 
   def authorize_api_key
